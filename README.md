@@ -27,8 +27,23 @@ Zyringe is the Linux-native equivalent of [SharpMonoInjector](https://github.com
 
 ---
 
+## Screenshots
+
+<div align="center">
+
+<img src="images/main.png" width="90%" alt="Zyringe main window — running Mono/Unity targets, the injection form, and the live console" />
+
+<br /><br />
+
+<img src="images/settings.png" width="70%" alt="Zyringe settings panel — accent colour, refresh interval, and paths" />
+
+</div>
+
+---
+
 ## Table of contents
 
+- [Screenshots](#screenshots)
 - [Who it's for](#who-its-for)
 - [Feature overview](#feature-overview)
 - [Target discovery](#target-discovery)
