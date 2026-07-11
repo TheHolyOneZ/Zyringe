@@ -14,7 +14,7 @@
   <img alt="backend" src="https://img.shields.io/badge/core-Rust%20%2B%20Tauri%20v2-dea584" />
 </p>
 
-<sub>Author: <b>TheHolyOneZ</b> · <a href="https://zlogic.eu/mods/">zlogic.eu/mods</a></sub>
+<sub>Made by <b>TheHolyOneZ</b> · <a href="https://github.com/TheHolyOneZ/Zyringe">Repo</a> · <a href="https://zlogic.eu/zyringe/">Download</a> · <a href="https://zsync.eu/">More projects</a> · <a href="https://zlogic.eu/mods/">Game mods</a></sub>
 
 </div>
 
@@ -464,6 +464,16 @@ packaging/            polkit rule
 Issues and PRs welcome. This is BETA — bug reports with the game, distro, loader/build, and the relevant `Player.log` / loader log are especially useful. By contributing you agree your contributions are licensed under GPL-3.0-only.
 
 ---
+
+## Links
+
+<table>
+<tr><td>📦 <b>Source (GitHub)</b></td><td><a href="https://github.com/TheHolyOneZ/Zyringe">github.com/TheHolyOneZ/Zyringe</a></td></tr>
+<tr><td>⬇️ <b>Download</b> (pre-compiled)</td><td><a href="https://zlogic.eu/zyringe/">zlogic.eu/zyringe</a> — the landing &amp; download page for ready-to-run builds (GitHub is source only)</td></tr>
+<tr><td>👤 <b>Author</b></td><td><a href="https://github.com/TheHolyOneZ">@TheHolyOneZ</a></td></tr>
+<tr><td>🧰 <b>More projects</b></td><td><a href="https://zsync.eu/">zsync.eu</a></td></tr>
+<tr><td>🎮 <b>Game mod menus</b></td><td><a href="https://zlogic.eu/mods/">zlogic.eu/mods</a></td></tr>
+</table>
 
 ## License
 

@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 import { open } from "@tauri-apps/plugin-dialog";
-import { Settings2, X, FolderOpen, RotateCcw, Check } from "lucide-react";
+import { invoke } from "@tauri-apps/api/core";
+import { Settings2, X, FolderOpen, RotateCcw, Check, Github, Download, Boxes, ExternalLink } from "lucide-react";
 import { ACCENTS, DEFAULT_SETTINGS, type Settings } from "../settings";
 import InfoTip from "./InfoTip";
+
+const openUrl = (u: string) => invoke("reveal_path", { path: u }).catch(() => {});
 
 interface Props {
   settings: Settings;
@@ -168,6 +171,26 @@ export default function SettingsModal({ settings, onChange, onClose }: Props) {
                 <dd>EndeavourOS · Linux 6.18 LTS · x86_64 · KDE / X11 · glibc 2.43</dd>
               </div>
             </dl>
+            <div className="about-made">
+              Made by <strong>TheHolyOneZ</strong>
+            </div>
+            <div className="about-links">
+              <button className="about-link" onClick={() => openUrl("https://github.com/TheHolyOneZ/Zyringe")}>
+                <Github size={13} /> GitHub repo
+              </button>
+              <button className="about-link" onClick={() => openUrl("https://github.com/TheHolyOneZ")}>
+                <Github size={13} /> @TheHolyOneZ
+              </button>
+              <button className="about-link" onClick={() => openUrl("https://zlogic.eu/zyringe/")}>
+                <Download size={13} /> Download (precompiled)
+              </button>
+              <button className="about-link" onClick={() => openUrl("https://zsync.eu/")}>
+                <Boxes size={13} /> More projects
+              </button>
+              <button className="about-link" onClick={() => openUrl("https://zlogic.eu/mods/")}>
+                <ExternalLink size={13} /> Game mod menus
+              </button>
+            </div>
           </div>
         </div>
 
