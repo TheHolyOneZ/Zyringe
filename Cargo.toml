@@ -1,0 +1,13 @@
+# Virtual workspace: the Tauri app backend and the privileged ptrace helper
+# share one target dir. The helper is a separate crate so it can be run under
+# pkexec while the app itself stays unprivileged.
+[workspace]
+members = ["src-tauri", "zyringe-inject"]
+resolver = "2"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+panic = "abort"
+strip = true

@@ -1,0 +1,16 @@
+[package]
+name = "zyringe-inject"
+version = "0.1.0"
+description = "Zyringe privileged ptrace injection helper (runs under pkexec)"
+authors = ["TheHolyOneZ"]
+license = "GPL-3.0-only"
+edition = "2021"
+
+[[bin]]
+name = "zyringe-inject"
+path = "src/main.rs"
+
+[dependencies]
+nix = { version = "0.29", features = ["ptrace", "process", "signal"] }
+libc = "0.2"
+serde_json = "1"

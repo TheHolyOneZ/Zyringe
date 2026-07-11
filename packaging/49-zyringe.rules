@@ -1,0 +1,24 @@
+// Zyringe polkit rules — customize the pkexec prompt for zyringe-inject.
+//
+// pkexec always authorizes via the built-in action
+// "org.freedesktop.policykit.exec"; this rule narrows the behavior for *our*
+// privileged binary specifically:
+//   * a local, active session user is prompted for the admin password
+//   * AUTH_ADMIN_KEEP means repeated injections in the same session won't
+//     re-prompt for a few minutes (nicer UX for iterating on a mod)
+//
+// Without this file, pkexec still works — it just prompts every time with a
+// generic message. Install to: /etc/polkit-1/rules.d/49-zyringe.rules
+//
+// Adjust the program path to wherever zyringe-inject is installed.
+
+polkit.addRule(function (action, subject) {
+  if (
+    action.id === "org.freedesktop.policykit.exec" &&
+    action.lookup("program") === "/usr/lib/zyringe/zyringe-inject" &&
+    subject.local &&
+    subject.active
+  ) {
+    return polkit.Result.AUTH_ADMIN_KEEP;
+  }
+});
